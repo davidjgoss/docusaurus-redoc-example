@@ -1,3 +1,8 @@
+const YAML = require('yaml');
+const fs = require('fs');
+const path = require('path');
+const spec = fs.readFileSync('./petstore.yaml', 'utf-8');
+
 module.exports = {
   title: 'My Site',
   tagline: 'The tagline of my site',
@@ -15,6 +20,11 @@ module.exports = {
         src: 'img/logo.svg',
       },
       items: [
+        {
+          to: 'api-reference',
+          label: 'API Reference',
+          position: 'left'
+        },
         {
           to: 'docs/',
           activeBasePath: 'docs',
@@ -101,4 +111,8 @@ module.exports = {
       },
     ],
   ],
+  customFields: {
+    apiSpec: YAML.parse(spec)
+  },
+  plugins: [path.resolve(__dirname, 'redoc-plugin')],
 };

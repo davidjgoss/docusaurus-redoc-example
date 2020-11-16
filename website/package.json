@@ -14,13 +14,15 @@
     "@docusaurus/core": "2.0.0-alpha.66",
     "@docusaurus/preset-classic": "2.0.0-alpha.66",
     "@mdx-js/react": "^1.5.8",
+    "buffer": "^6.0.2",
     "clsx": "^1.1.1",
     "core-js": "^3.7.0",
     "mobx": "^6.0.4",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "redoc": "^2.0.0-rc.45",
-    "styled-components": "^5.2.1"
+    "styled-components": "^5.2.1",
+    "yaml": "^1.10.0"
   },
   "browserslist": {
     "production": [
